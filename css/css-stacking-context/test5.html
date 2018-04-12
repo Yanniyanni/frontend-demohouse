@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>笔试题目</title>
+</head>
+
+<body>
+    <h1>笔试题目 - 写出从上到下的层叠顺序,例如.one .two .four ...</h1>
+
+    <strong>html</strong>
+    <xmp>
+        <div class="one">
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+
+        <div class="four">
+            <div class="five"></div>
+            <div class="six"></div>
+        </div>
+    </xmp>
+
+    <strong>css</strong>
+    <xmp>
+        .one {
+            position: relative;
+            z-index: 2;
+        }
+
+        .two {
+            z-index: 6;
+        }
+
+        .three {
+            position: absolute;
+            z-index: 5;
+        }
+
+        .four {
+            position: absolute;
+
+        }
+
+        .five {}
+
+        .six {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    </xmp>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用了css3属性之后的7阶层叠顺序</title>
+    <style>
+        .one,
+        .two,
+        .three,
+        .four,
+        .five,
+        .six {
+            width: 200px;
+            height: 100px;
+        }
+
+        .one {
+            position: absolute;
+            z-index: -1;
+            background: #8874c1;
+        }
+
+        .two {
+            background: #4f6fc1;
+            margin-left: 100px;
+        }
+
+        .three {
+            float: left;
+            background: #51cd8d;
+            margin-top: -50px;
+        }
+
+        .four {
+            display: inline-block;
+            background: #9cd262;
+            margin-left: -100px;
+            margin-top: -30px;
+        }
+
+        .five {
+            position: absolute;
+            background: #d9ac4c;
+            margin-top: -60px;
+            margin-left: 50px;
+        }
+
+        .six {
+            position: absolute;
+            z-index: 1;
+            background: #d93953;
+            margin-top: -100px;
+            margin-left: 100px;
+        }
+
+        .five-1,
+        .five-2,
+        .five-3,
+        .five-4,
+        .five-5,
+        .five-6,
+        .five-7 {
+            width: 200px;
+            height: 100px;
+        }
+
+        .five-1 {
+            display: flex;
+            margin-top: -20px;
+            background: pink;
+        }
+
+        .five-1-sub {
+            background: blueviolet;
+            z-index: 1;
+        }
+
+        .five-2 {
+            opacity: 0.9;
+            background: red;
+            margin-top: -15px;
+        }
+
+        .five-3 {
+            transform: rotate(15deg);
+            background: #8484f1;
+            margin-top: -30px;
+        }
+
+        .five-4 {
+            mix-blend-mode: darken;
+            background: #ec57f9;
+            margin-top: -50px;
+        }
+
+        .five-5 {
+            filter: blur(1px);
+            background: #3a64d4;
+            margin-top: -40px;
+        }
+
+        .five-6 {
+            isolation: isolate;
+            background: #b18017;
+            margin-top: -40px;
+        }
+
+        .five-7 {
+            background: #73c1bc;
+            will-change: transform;
+            margin-top: -40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>2、使用了css3属性之后的7阶层叠顺序</h1>
+
+    <div class="one">one —— z-index为负值</div>
+    <div class="two">two —— block块状水平盒子</div>
+    <div class="three">three —— 浮动盒子</div>
+    <div class="four">four —— inline/inline-block水平盒子</div>
+    <div class="five">five —— z-index:auto/z-index:0</div>
+    <div class="five-2">opacity</div>
+    <div class="five-3">transform</div>
+    <div class="five-4">mix-blend-mode</div>
+    <div class="five-5">filter</div>
+    <div class="five-6">isolation:isolate</div>
+    <div class="five-7">will-change</div>
+    <div class="five-1">
+        <div class="five-1-sub">flex子元素</div>
+    </div>
+    <div class="six">six —— z-index为正值</div>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7阶层叠顺序展示</title>
+    <style>
+        .one,
+        .two,
+        .three,
+        .four,
+        .five,
+        .six {
+            width: 200px;
+            height: 200px;
+        }
+
+        .one {
+            position: absolute;
+            z-index: -1;
+            background: #8874c1;
+        }
+
+        .two {
+            background: #4f6fc1;
+            margin-left: 100px;
+        }
+
+        .three {
+            float: left;
+            background: #51cd8d;
+            margin-top: -100px;
+        }
+
+        .four {
+            display: inline-block;
+            background: #9cd262;
+            margin-left: -100px;
+        }
+
+        .five {
+            position: absolute;
+            background: #d9ac4c;
+            margin-top: -130px;
+            margin-left: 50px;
+        }
+
+        .six {
+            position: absolute;
+            z-index: 1;
+            background: #d93953;
+            margin-top: -50px;
+            margin-left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1、7阶层叠顺序展示</h1>
+
+    <div class="one">one —— z-index为负值</div>
+    <div class="two">two —— block块状水平盒子</div>
+    <div class="three">three —— 浮动盒子</div>
+    <div class="four">four —— inline/inline-block水平盒子</div>
+    <div class="five">five —— z-index:auto/z-index:0</div>
+    <div class="six">six —— z-index为正值</div>
+</body>
+
+</html>
