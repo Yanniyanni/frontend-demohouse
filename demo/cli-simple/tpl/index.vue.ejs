@@ -1,0 +1,21 @@
+<template>
+  <div class="app">
+    <h2>这是个ejs模板，可以使用获取到交互命令有关的内容</h2>
+    <div>
+      <% if (page == 'single') { %>
+        <p>这是一个单页应用</p>
+      <% } else { %>
+        <p>这是一个多页应用</p>
+      <% } %>
+    </div>
+    <div>
+      看看package.json.ejs，也可以使用交互的参数哦。
+    </div>
+    
+  </div>
+</template>
+
+<script>
+export default {
+}
+</script>

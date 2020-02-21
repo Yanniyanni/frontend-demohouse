@@ -1,0 +1,24 @@
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+<% if (routerMode == 'history') { %>
+import { publicPath } from '@/common/env';
+<% } %>
+import Demo from '../views/demo';
+
+Vue.use(VueRouter);
+
+const routes = [
+    {
+        path: `/demo`,
+        component: Demo
+    }
+];
+
+const router = new VueRouter({
+    <% if (routerMode == 'history') { %>
+    mode: 'history',
+    base: `/${publicPath}`,
+    <% } %>
+    routes
+});
+export default router;
