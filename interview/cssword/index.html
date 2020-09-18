@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background: pink;
+            }
+            .block {
+                margin: 30px;
+                padding: 10px;
+            }
+            .block1 {
+                background: red;
+            }
+            .block2 {
+                background: goldenrod;
+            }
+            .display-inline-block {
+                display: inline-block;
+            }
+            .float-left {
+                float: left;
+            }
+            .display-grid {
+                display: grid;
+                grid-template-columns: 100px 50px 100px 50px;
+                grid-template-rows: 80px auto 80px auto; 
+                grid-column-gap: 10px;
+                grid-row-gap: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>BFC 介绍</h1>
+        <h3>1、非 BFC 垂直排列，margin重叠，只计算最大 margin</h3>
+        <div class="block block1">block1</div>
+        <div class="block block2">block2</div>
+        <h3>1.1、使用 display: inline-block; 生成BFC，防止margin坍塌</h3>
+        <div class="block block1 display-inline-block">block1</div>
+        <div class="block block2 display-inline-block">block2</div>
+        <h3>2、非 BFC 浮动，margin重叠？</h3>
+        <div class="block block1 float-left">block1</div>
+        <div class="block block2 float-left">block1</div>
+        <h1>IFC 介绍???</h1>
+        <h3>1、非 IFC</h3>
+        <h1>GFC 介绍</h1>
+        <h3>1、使用 display: grid; 形成网格布局</h3>
+        <div class="block1 display-grid">
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+            <div class="block2">111</div>
+        </div>
+    </body>
+</html>

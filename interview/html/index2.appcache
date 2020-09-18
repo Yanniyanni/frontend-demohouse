@@ -1,0 +1,12 @@
+CACHE MANIFEST
+#img
+https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/topnav/baiduyun@2x-e0be79e69e.png
+#css
+https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/css/soutu_new2_ae491b7.css
+#js
+https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/js/lib/jquery-1-edb203c114.10.2.js
+NETWORK:
+*
+
+FALLBACK
+https://github.com/ /html/manifest/html/home.html
